@@ -8,11 +8,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <link rel="icon" type="image/x-icon" href="https://companieslogo.com/img/orig/DMART.NS-6f885d00.png?t=1599629043">
-
 </head>
 
 <body class="bg-gray-100 font-sans">
-    <!-- Navigation -->
 
     <!-- Header -->
     <header
@@ -20,14 +18,12 @@
 
         <div class="flex items-center w-1/2">
 
-            <!--lg:hidden-->
             <!-- Dropdown menu -->
-
 
             <!-- drawer init and show -->
             <div class="text-center">
                 <button
-                    class="mr-2 text-green-700 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 lg:hidden"
+                    class="mr-2 text-green-700 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100"
                     type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
                     aria-controls="drawer-navigation">
                     <svg id="toggleSidebarMobileHamburger" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
@@ -38,7 +34,6 @@
                     </svg>
                 </button>
             </div>
-
 
             <!-- drawer component -->
             <div id="drawer-navigation"
@@ -192,6 +187,7 @@
                 Wishlist
             </button>
             <!--cart-->
+            <a href="#">
             <button type="button"
                 class="inline-flex items-center ms-2 px-4 py-2 md:flex-shrink-sm text-ml font-medium text-green-700 bg-white border border-gray-200 rounded-full hover:bg-green-700 hover:text-white focus:ring-green-700 focus:text-green-700">
                 <svg class="w-5 h-5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -201,149 +197,146 @@
                 </svg>
                 Cart
             </button>
+        </a>
         </div>
-
     </header>
 
-    <!-- Main Content -->
-    <!--Categories-->
 
-    <div class="container mx-auto inline-flex px-4 flex justify-between overflow-x-auto overflow-hidden py-2 bg-white">
 
-        <!--discount-->
-        <div class="w-32 text-black flex justify-center items-center flex-shrink-0">
-            <div class="flex flex-col items-center">
-                <div>
-                    <img class="w-20 h-20 p-1 rounded-full ring-2 ring-green-700"
-                        src="https://img.freepik.com/premium-vector/big-sale-banner-design_1588-972.jpg" alt="Home">
+    <!--Product page-->
+    <!--Breadcrumbs-->
+    <nav class="flex p-4" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li class="inline-flex items-center">
+                <a href="index.html"
+                    class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-green-700">
+                    <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <svg class="rtl:rotate-180 w-3 h-3 text-gray-500 mx-1" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <a href="#" class="ms-1 text-sm font-medium text-gray-700 hover:text-green-700 md:ms-2">Best
+                        Sellers</a>
                 </div>
-                <div class="flex justify-center text-center p-1 text-black">
-                    <p>Discount</p>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg class="rtl:rotate-180 w-3 h-3 text-gray-500 mx-1" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="ms-1 text-sm font-medium text-gray-700 md:ms-2">TRESemme Keratin Repair Bond Strength
+                        Shampoo</span>
+                </div>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="inline-flex flex justify-between sm:flex px-2">
+
+        <div class="grid gap-4 w-2/3 me-4">
+            <div>
+                <img class="h-auto max-w-full rounded-lg"
+                    src="https://m.media-amazon.com/images/I/41UtGPjnNeL._SL1000_.jpg" alt="Tres main">
+            </div>
+            <div class="grid grid-cols-4 gap-4">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://m.media-amazon.com/images/I/51kCYwBQqHL._SL1000_.jpg" alt="Tres2">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://m.media-amazon.com/images/I/71VL4-+pjYL._SL1000_.jpg" alt="Tres3">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://m.media-amazon.com/images/I/613hP7cBj+L._SL1000_.jpg" alt="Tres4">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://m.media-amazon.com/images/I/61cAbb6no0L._SL1000_.jpg" alt="Tres5">
                 </div>
             </div>
         </div>
 
-        <!--Grocery-->
-        <div class="w-32 text-black flex justify-center items-center flex-shrink-0">
-            <div class="flex flex-col items-center">
-                <div>
-                    <img class="w-20 h-20 p-1 rounded-full ring-2 ring-green-700"
-                        src="https://wallpaperaccess.com/full/3493317.jpg" alt="staple">
+        <div class="w-1/3 bg-white shadow rounded flex-shrink-0" id="tres">
+
+            <div class="p-4 flex flex-col items-start">
+                <p
+                    class="uppercase text-s bg-green-50 p-0.5 border-green-700 border rounded text-green-700 font-medium select-none">
+                    Available</p>
+                <h2 class="text-xl font-semibold text-gray-800 text-start mt-4">TRESemme Keratin Repair Bond Strength
+                    Shampoo</h2>
+
+                <h1 class="font-bold text-2xl text-center text-gray-800 mt-6">Rs. 563</h1>
+                <div class="flex-1">
+                    <p class="text-green-500 text-xl font-semibold">Save 12%</p>
+                    <p class="text-gray-400 text-sm">Inclusive of all Taxes.</p>
                 </div>
-                <div class="flex justify-center text-center p-1 text-black">
-                    <p>Grocery</p>
+                <div class="inline-flex items-center mt-4 mb-4"> <button
+                        class="bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                        </svg> </button>
+                    <div
+                        class="bg-gray-100 border-t border-b border-gray-100 text-gray-600 hover:bg-gray-100 inline-flex items-center px-4 py-1 select-none">
+                        2 </div> <button
+                        class="bg-white rounded-r border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg> </button>
                 </div>
+                <div class="lg:flex flex-row items-start w-full md:overflow-hidden">
+                    <div class="me-2 w-full">
+                        <button
+                            class="py-2 px-4 bg-green-700 text-white rounded hover:bg-green-900 disabled:opacity-50 mt-4 w-full flex items-center justify-center">
+                            ADD TO WISHLIST <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none"
+                                viewBox="0 0 512 512" stroke="none">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    fill="currentColor"
+                                    d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                                </path>
+                            </svg> </button>
+                    </div>
+                    <div class="w-full">
+                        <button
+                            class="py-2 px-4 bg-green-700 text-white rounded hover:bg-green-900 disabled:opacity-50 mt-4 w-full flex items-center justify-center">
+                            ADD TO CART <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg> </button>
+                    </div>
+                </div>
+                <h3 class="text-l text-gray-500 text-start mt-6">DESCRIPTION</h3>
+                <p class="text-sm text-gray-500 text-start mt-4">
+                    Helps in creating millions of hair bonds.
+                    Repairs damaged hair caused due to coloring, heat styling & bleaching.
+                    Enriched with Protein Bonding Complex.
+                    Repairs from within & forms new hair bonds.
+                    Restores up to 85% of original hair strength.
+                    Quick 5-min salon-like hair treatment at home.
+                </p>
             </div>
-        </div>
-
-        <!--Staples-->
-        <div class="w-32 text-black flex justify-center items-center flex-shrink-0">
-            <div class="flex flex-col items-center">
-                <div>
-                    <img class="w-20 h-20 p-1 rounded-full ring-2 ring-green-700"
-                        src="https://th.bing.com/th/id/OIP.XxKCvpb27j_-GZCoo8n1NgHaHa?rs=1&pid=ImgDetMain" alt="staple">
-                </div>
-                <div class="flex justify-center text-center p-1 text-black">
-                    <p>Staples</p>
-                </div>
-            </div>
-        </div>
-
-        <!--Dairy-->
-        <div class="w-32 text-black flex justify-center items-center flex-shrink-0">
-            <div class="flex flex-col items-center">
-                <div>
-                    <img class="w-20 h-20 p-1 rounded-full ring-2 ring-green-700"
-                        src="https://deow9bq0xqvbj.cloudfront.net/ep-logo/pbblog1675657/TNR-eggs500_300x300.jpg"
-                        alt="Dairy">
-                </div>
-                <div class="flex justify-center text-center p-1 text-black">
-                    <p>Dairy & Frozen</p>
-                </div>
-            </div>
-        </div>
-
-        <!--Personal care-->
-        <div class="w-32 text-black flex justify-center items-center flex-shrink-0">
-            <div class="flex flex-col items-center">
-                <div>
-                    <img class="w-20 h-20 p-1 rounded-full ring-2 ring-green-700"
-                        src="https://images.yourstory.com/cs/21/a182c7e0-1407-11e9-87e2-f7248b252f46/Personal_care1562933164067.jpg?fm=png&auto=format"
-                        alt="Home">
-                </div>
-                <div class="flex justify-center text-center p-1 text-black">
-                    <p>Personal Care</p>
-                </div>
-            </div>
-        </div>
-
-        <!--Home appliance-->
-        <div class="w-32 text-black flex justify-center items-center flex-shrink-0">
-            <div class="flex flex-col items-center">
-                <div>
-                    <img class="w-20 h-20 p-1 rounded-full ring-2 ring-green-700"
-                        src="https://www.familyhandyman.com/wp-content/uploads/2019/12/shutterstock_1120308431.jpg"
-                        alt="Home">
-                </div>
-                <div class="flex justify-center text-center p-1 text-black">
-                    <p>Home appliance</p>
-                </div>
-            </div>
-        </div>
-
-        <!--Footwear-->
-        <div class="w-32 text-black flex justify-center items-center flex-shrink-0">
-            <div class="flex flex-col items-center">
-                <div>
-                    <img class="w-20 h-20 p-1 rounded-full ring-2 ring-green-700"
-                        src="https://www.india.com/wp-content/uploads/2017/08/footwear.jpg" alt="Home">
-                </div>
-                <div class="flex justify-center text-center p-1 text-black">
-                    <p>Footwear</p>
-                </div>
-            </div>
-        </div>
-
-        <!--Luggage-->
-        <div class="w-32 text-black flex justify-center items-center flex-shrink-0">
-            <div class="flex flex-col items-center">
-                <div>
-                    <img class="w-20 h-20 p-1 rounded-full ring-2 ring-green-700"
-                        src="https://th.bing.com/th/id/OIP.bhCyrUS_hhe_F858HTWrUwHaF_?rs=1&pid=ImgDetMain" alt="Home">
-                </div>
-                <div class="flex justify-center text-center p-1 text-black">
-                    <p>Luggage</p>
-                </div>
-            </div>
-        </div>
-
-        <!--Apparel-->
-        <div class="w-32 text-black flex justify-center items-center flex-shrink-0">
-            <div class="flex flex-col items-center">
-                <div>
-                    <img class="w-20 h-20 p-1 rounded-full ring-2 ring-green-700"
-                        src="https://img1.wsimg.com/isteam/stock/2752/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" alt="Home">
-                </div>
-                <div class="flex justify-center text-center p-1 text-black">
-                    <p>Apparel</p>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-
-    <div class=" py-8">
-        <div class="flex items-center">
-            <img src="https://www.dmartindia.com/static/media/home-banner.644eeaa9.jpg"
-                class="object-fit-sm-contain w-full" alt="dmart logo">
         </div>
     </div>
 
 
     <!--Product Card-->
-    <h1 class="text-3xl font-semibold tracking-tight text-gray-900 px-4 py-4 m-4">Best Sellers</h1>
+    <h1 class="text-3xl font-semibold tracking-tight text-gray-900 px-4 py-4 m-4">Recommended</h1>
     <div class="container mx-auto inline-flex px-8 mb-4 overflow-x-auto overflow-hidden">
 
         <!--TRESemme Keratin Repair Bond Strength Shampoo-->
@@ -609,12 +602,9 @@
                 </div>
             </div>
         </div>
-
     </div>
 
-
     <!-- Footer -->
-
 
     <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
@@ -642,13 +632,11 @@
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
-                    href="https://www.dmartindia.com/" class="hover:underline">Dmart™</a>. All Rights Reserved.</span>
+                    href="https://www.dmartindia.com/" class="hover:underline">Dmart™</a>. All Rights
+                Reserved.</span>
         </div>
     </footer>
 
-
-
-    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>

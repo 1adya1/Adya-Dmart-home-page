@@ -1,0 +1,459 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using TailwindCSS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://companieslogo.com/img/orig/DMART.NS-6f885d00.png?t=1599629043">
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header -->
+    <header
+        class="bg-white text-black flex justify-between items-center p-5 sticky top-0 z-50 dark:bg-grey-800 dark:text-white">
+
+        <div class="flex items-center w-1/2">
+
+            <!-- Dropdown menu -->
+
+            <!-- drawer init and show -->
+            <div class="text-center">
+                <button
+                    class="mr-2 text-green-700 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100"
+                    type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+                    aria-controls="drawer-navigation">
+                    <svg id="toggleSidebarMobileHamburger" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- drawer component -->
+            <div id="drawer-navigation"
+                class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800"
+                tabindex="-1" aria-labelledby="drawer-navigation-label">
+                <h5 id="drawer-navigation-label"
+                    class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Menu</h5>
+                <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="sr-only">Close menu</span>
+                </button>
+
+                <div class="py-4 overflow-y-auto">
+                    <ul class="space-y-2 font-medium">
+
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 18 18">
+                                    <path
+                                        d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Categories</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 18 20">
+                                    <path
+                                        d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        stroke="currentColor"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Cart</span>
+                                <span
+                                    class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 18">
+                                    <path
+                                        d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Accounts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 18 16">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z" />
+                                    <path
+                                        d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z" />
+                                    <path
+                                        d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/09/dmart_logo_avenue_super_markets.png"
+                    class="object-fit-sm-contain ms-2" alt="dmart logo" width="180">
+            </a>
+            <!--Search bar-->
+            <div class="flex items-center grow ms-3 md:flex-shrink-sm hidden md:flex ml-6 xl:ml-20">
+                <form class="flex items-center grow m-0">
+                    <label for="search" class="sr-only">Search</label>
+                    <div class="flex items-center w-full py-2">
+                        <input type="search" id="search"
+                            class="bg-gray-50 border border-green-700 text-gray-900 sm:text-sm rounded-full focus:ring-green-700 focus:border-green-700 block w-full p-2"
+                            placeholder="Search..." required>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="inline-flex rounded-md shadow-sm md:flex" role="group">
+            <!--Profile-->
+            <button type="button"
+                class="inline-flex items-center ms-2 px-4 py-2 md:flex-shrink-sm text-ml font-medium text-green-700 bg-white border border-gray-200 rounded-full hover:bg-green-700 hover:text-white focus:ring-green-700 focus:text-green-700">
+                <svg class="w-5 h-5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                        d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
+                </svg>
+                Profile
+            </button>
+            <!--Wishlist-->
+            <button type="button"
+                class="inline-flex items-center ms-2 px-4 py-2 md:flex-shrink-sm text-ml font-medium text-green-700 bg-white border border-gray-200 rounded-full hover:bg-green-700 hover:text-white focus:ring-green-700 focus:text-green-700">
+                <svg class="w-5 h-5 me-2 svg-inline--fa fa-heart fa-w-16 fa-9x" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor"
+                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                    </path>
+                </svg>
+                Wishlist
+            </button>
+            <!--cart-->
+            <button type="button"
+                class="inline-flex items-center ms-2 px-4 py-2 md:flex-shrink-sm text-ml font-medium text-green-700 bg-white border border-gray-200 rounded-full hover:bg-green-700 hover:text-white focus:ring-green-700 focus:text-green-700">
+                <svg class="w-5 h-5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Cart
+            </button>
+        </div>
+    </header>
+
+    <!-- component -->
+    <div class="py-6">
+        <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
+
+            <div class="w-full p-8 lg:w-1/2">
+
+                <p class="text-xl text-gray-600 text-center">Welcome back!</p>
+                <a href="#"
+                    class="flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100">
+                    <div class="px-4 py-3">
+                        <svg class="h-6 w-6" viewBox="0 0 40 40">
+                            <path
+                                d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+                                fill="#FFC107" />
+                            <path
+                                d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z"
+                                fill="#FF3D00" />
+                            <path
+                                d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z"
+                                fill="#4CAF50" />
+                            <path
+                                d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+                                fill="#1976D2" />
+                        </svg>
+                    </div>
+                    <h1 class="px-4 py-3 w-5/6 text-center text-gray-600 font-bold">Sign in with Google</h1>
+                </a>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="border-b w-1/5 lg:w-1/4"></span>
+                    <a href="#" class="text-xs text-center text-gray-500 uppercase">or login with email</a>
+                    <span class="border-b w-1/5 lg:w-1/4"></span>
+                </div>
+                <div class="mt-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input
+                        class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                        type="email">
+                </div>
+                <div class="mt-4">
+                    <div class="flex justify-between">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                        <a href="#" class="text-xs text-gray-500">Forget Password?</a>
+                    </div>
+                    <input
+                        class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                        type="password">
+                </div>
+                <div class="mt-8">
+                    <button
+                        class="bg-green-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-green-800">Login</button>
+                </div>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="border-b w-1/5 md:w-1/4"></span>
+                    <a href="#" class="text-xs text-gray-500 uppercase">or sign up</a>
+                    <span class="border-b w-1/5 md:w-1/4"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- component -->
+    <div class="lg:container lg:mx-auto lg:py-16 md:py-12 md:px-6 py-12 px-4">
+        <h1
+            class="text-start px-6 dark:text-white lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 font-semibold">
+            FAQ's</h1>
+
+        <div class="lg:w-8/12 w-full mx-auto">
+            <!-- Question 1 -->
+            <hr class="w-full lg:mt-10 md:mt-12 md:mb-8 my-8" />
+
+            <div class="w-full md:px-6">
+                <div id="mainHeading" class="flex justify-between items-center w-full">
+                    <div class="">
+                        <p
+                            class="flex justify-center items-center dark:text-white font-medium text-base leading-6 md:leading-4 text-gray-800">
+                            <span
+                                class="lg:mr-6 mr-4 dark:text-white lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q1.</span>
+                            How do I login to my Dmart account?
+                        </p>
+                    </div>
+                    <button aria-label="toggler"
+                        class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                        <img class="transform dark:hidden "
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg" alt="toggler">
+                        <img class="transform dark:block hidden "
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                    </button>
+                </div>
+                <div id="menu" class="hidden mt-6 w-full">
+                    <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">
+
+                        You can login to your Myntra account with these 3 simple steps:
+                        Click on LOG IN/SIGN UP and enter your mobile number, then click on CONTINUE.
+                        An OTP will be sent to the mobile number entered by you.
+                        Verify the OTP and post successful verification, you will be able to log in to Myntra.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+
+            <hr class="w-full lg:mt-10 my-8" />
+
+            <div class="w-full md:px-6">
+                <div id="mainHeading" class="flex justify-between items-center w-full">
+                    <div class="">
+                        <p
+                            class="flex justify-center items-center dark:text-white font-medium text-base leading-6 lg:leading-4 text-gray-800">
+                            <span
+                                class="lg:mr-6 dark:text-white mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q2.</span>
+                            Why am I not getting an OTP?
+                        </p>
+                    </div>
+                    <button aria-label="toggler"
+                        class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                        <img class="transform dark:hidden "
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg" alt="toggler">
+                        <img class="transform dark:block hidden "
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                    </button>
+                </div>
+                <div id="menu" class="hidden mt-6 w-full">
+                    <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">
+
+                        We recommend you follow these steps to get the OTP:
+                        Check if you entered the correct phone number registered to your Myntra account. Suggestion-
+                        Make sure you have entered the correct and registered phone number only.
+                        Try checking the network connection/SMS blocker due to which the OTP might be delayed/blocked.
+                        Request for OTP once more.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+
+            <hr class="w-full lg:mt-10 my-8" />
+
+            <div class="w-full md:px-6">
+                <div id="mainHeading" class="flex justify-between items-center w-full">
+                    <div class="">
+                        <p
+                            class="flex justify-center items-center dark:text-white font-medium text-base leading-6 lg:leading-4 text-gray-800">
+                            <span
+                                class="lg:mr-6 dark:text-white mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q3.</span>
+                            Why is my account locked?
+                        </p>
+                    </div>
+                    <button aria-label="toggler"
+                        class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                        <img class="transform dark:hidden "
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg" alt="toggler">
+                        <img class="transform dark:block hidden "
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                    </button>
+                </div>
+                <div id="menu" class="hidden mt-6 w-full">
+                    <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">
+                        Your Dmart account may get locked for a specified time period or permanently in case there are
+                        too many failed login attempts.
+                        This is for the security of your account. You should be able to gain access to your account by
+                        resetting your password.
+                        If the issue persists, click below to talk to our customer care executive.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Question 4 -->
+
+            <hr class="w-full lg:mt-10 my-8" />
+
+            <div class="w-full md:px-6">
+                <div id="mainHeading" class="flex justify-between items-center w-full">
+                    <div class="">
+                        <p
+                            class="flex justify-center items-center dark:text-white font-medium text-base leading-6 lg:leading-4 text-gray-800">
+                            <span
+                                class="lg:mr-6 dark:text-white mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q5.</span>
+                            Why are you collecting my personal details?
+                        </p>
+                    </div>
+                    <button aria-label="toggler"
+                        class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                        <img class="transform dark:hidden "
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg" alt="toggler">
+                        <img class="transform dark:block hidden "
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                    </button>
+                </div>
+                <div id="menu" class="hidden mt-6 w-full">
+                    <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">
+                        Dmart uses your information to help you with faster payments and delivery. We also save your
+                        likes and preferences to show you personalized content that suits your style.
+                        For more details on how we use your personal data please refer to the Dmart Privacy Policy.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="w-full lg:mt-10 my-8" />
+        </div>
+    </div>
+
+    <script>
+        let elements = document.querySelectorAll("[data-menu]");
+        for (let i = 0; i < elements.length; i++) {
+            let main = elements[i];
+
+            main.addEventListener("click", function () {
+                let element = main.parentElement.parentElement;
+                let indicators = main.querySelectorAll("img");
+                let child = element.querySelector("#menu");
+                let h = element.querySelector("#mainHeading>div>p");
+
+                h.classList.toggle("font-semibold");
+                child.classList.toggle("hidden");
+                // console.log(indicators[0]);
+                indicators[0].classList.toggle("rotate-180");
+            });
+        }
+    </script>
+
+
+
+    <!-- Footer -->
+
+
+    <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/09/dmart_logo_avenue_super_markets.png"
+                        class="h-8" alt="Dmart Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Dmart</span>
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                    href="https://www.dmartindia.com/" class="hover:underline">Dmart™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
